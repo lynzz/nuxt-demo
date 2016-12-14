@@ -1,19 +1,23 @@
 html, body
 {
-  background-color: #fff;
-  color: #2e2f30;
-  letter-spacing: 0.5px;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: #e1e1e1;
+  color: #34495e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   height: 100vh;
   margin: 0;
+  font-size: 14px;
+}
+
+a {
+  color: #34495e;
+  text-decoration: none;
 }
 
 .container
 {
-  margin: 0;
-  width: 100%;
-  padding-top: 150px;
-  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  max-width: 800px;
 }
 
 .button, .button:visited
@@ -33,13 +37,76 @@ html, body
   color: #fff;
   background-color: #3B8070;
 }
+.topic-list {
 
-.title
-{
-  color: #505153;
-  font-weight: 300;
-  font-size: 2em;
-  margin: 0;
+}
+.topic-item {
+  background-color: #fff;
+  padding: 20px 30px 20px 30px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  display: flex;
+  line-height: 30px;
+}
+.topic-item-title {
+  max-width: 70%;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  padding-left: 4px;
+  overflow: hidden;
+}
+.topic-item-label {
+  background-color: #e5e5e5;
+  color: #999;
+  border-radius: 3px;
+  padding: 2px 4px;
+  line-height: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  font-size: 12px;
+}
+.topic-item-label.is-primary {
+  background-color: #80bd01;
+  color: #fff;
+}
+.topic-item-avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.topic-item:last-child {
+  border-bottom: 0;
+}
+
+.topic-item-count {
+  width: 70px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.topic-item-count .reply {
+  color: #9e78c0;
+}
+.topic-item-count .visit {
+  color: #b4b4b4;
+}
+.nav {
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 3px 3px 0 0;
+}
+.nav a {
+  margin: 0 10px;
+  color: #80bd01;
+}
+.nav .router-link-active {
+  background-color: #80bd01;
+  color: #fff;
+  padding: 3px 4px;
+  border-radius: 3px;
 }
 
 .page-enter-active, .page-leave-active

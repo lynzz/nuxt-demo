@@ -5,6 +5,7 @@
   "author": "lynzz <lynzz168@gmail.com>",
   "private": true,
   "dependencies": {
+    "axios": "^0.15.3",
     "nuxt": "latest"
   },
   "scripts": {

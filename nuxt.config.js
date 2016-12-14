@@ -11,4 +11,22 @@ module.exports = {
     ]
   },
   css: ['~assets/main.css'],
+  router: {
+    routes: [
+      {
+        name: 'topic',
+        path: '/:tab',
+        component: 'pages/_topic'
+      },
+      {
+        name: 'post',
+        path: '/post/:id',
+        component: 'pages/_post'
+      }
+      // {
+      //   path: '/',
+      //   redirect: '/topic/all'
+      // },
+    ]
+  }
 }

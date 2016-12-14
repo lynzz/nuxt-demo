@@ -10,8 +10,13 @@
   import TopicList from '~components/TopicList.vue'
 
   export default {
-    data ({req}) {
-      return api.getTopicsList().then(items => {
+    data ({ params, error }) {
+      const tab = params ? params.tab : ''
+
+      if (['all', 'ask', 'job', 'good', 'share'].indexOf(tab) == -1) {
+        error({ message: `${tab} not found`, statusCode: 404 })
+      }
+      return api.getTopicsList(tab).then(items => {
         return {
           items
         }
@@ -19,7 +24,7 @@
     },
 
     components: {
-      TopicList,
+      TopicList
     }
   }
 </script>
